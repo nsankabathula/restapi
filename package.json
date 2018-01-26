@@ -1,0 +1,30 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Rest API using Express",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsankabathula/restapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "express"
+  ],
+  "author": "Naveen Sankabathula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsankabathula/restapi/issues"
+  },
+  "homepage": "https://github.com/nsankabathula/restapi#readme"
+}
