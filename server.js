@@ -1,10 +1,13 @@
 const express        = require('express');
 const bodyParser     = require('body-parser');
+const loki = require('lokijs');
 const app            = express();
+
+const database = require('./app/db');
 
 const port = 8000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+
 
 
 app['shutdown'] = function() {
@@ -21,7 +24,10 @@ app['shutdown'] = function() {
     }, 10*1000);
   };
 
-require('./app/routes')(app, {});
+var appDb = database();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+require('./app/routes')(app, appDb);
 
 var server = app.listen(port, () => {
   console.log('RestAPI live on port ' + port);  
